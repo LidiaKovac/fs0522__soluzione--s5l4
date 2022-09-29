@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+/* ! setup della pagina */
+
+* {
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url("./assets/bg.webp");
+  margin: 0;
+  padding: 10%;
+  font-size: 30px;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* ! classi utils utilizzate con JS */
+
+.text--bold {
+  font-weight: bold;
+}
+
+.text--underlined {
+  text-decoration: underline;
+}
+
+.text--italics {
+  font-style: italic;
+}
+
+.text--arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text--comic {
+  font-family: "Comic Neue", cursive;
+}
+
+.text--strike {
+    text-decoration: line-through wavy red
+}
+
+/* ! classi usate nello styling della pagina */
+
+.format__group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.format__style,
+.format__text {
+  flex: 1 1 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px;
+}
+/*  ! styling inputs */
+
+/*  checkbox */
+input[type="checkbox"]:not(.task-list__inner) , input[type="radio"] {
+  display: none;
+}
+
+label {
+  user-select: none;
+}
+
+input[type="checkbox"]:not(.task-list__inner) + label, input[type="radio"] + label {
+  border-radius: 50px;
+  background-color: lightgray;
+  color: black;
+  min-width: 50px;
+  max-height: 50px;
+  padding: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+input[type="checkbox"]:not(.task-list__inner):checked + label, input[type="radio"]:checked + label {
+  border: solid blue 2px;
+}
+
+.task-list__inner {
+    width: 20px;
+    height: 20px;
+}
+
+/* text input */
+
+.task__input {
+  border: none;
+  height: 40px;
+  width: 50%;
+  font-size: inherit;
+  margin-top: 60px ;
+}
+
+.task__input + button {
+  background-color: lightgray;
+  border: none;
+  height: 40px;
+  font-size: inherit;
+}
+
+
+
+/* color input */
+
+input[type="color"] {
+  background-color: gray;
+  border: none;
+  height: 50px;
+  border-radius: 50px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 50px;
+}
+
+/* select */
+
+select {
+    width: 40%;
+    height: 50px;
+    font-size: inherit;
+}
+

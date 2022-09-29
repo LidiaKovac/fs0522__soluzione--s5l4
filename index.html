@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="format__group">
+      <!-- gli eventi per le checkbox sono stati aggiunti e gestiti usando addEventListener -->
+      <div class="format__style">
+        <input type="checkbox" id="bold" value="text--bold" />
+        <label for="bold"> <strong>B</strong> </label>
+
+        <input type="checkbox" id="underlined" value="text--underlined" />
+        <label for="underlined"> <u>U</u> </label>
+
+        <input type="checkbox" id="italics" value="text--italics" />
+        <label for="italics"> <i>i</i> </label>
+        <select onchange="handleIcon(event)">
+          <option value='def' disabled selected>Scegli un'icona</option>
+          <option value="🤡">🤡 Esempio</option>
+          <option value="🚀">🚀 Esempio</option>
+          <option value="🏘️">🏘️ Esempio</option>
+          <option value="💖">💖 Esempio</option>
+        </select>
+      </div>
+      <div class="format__text">
+        <input type="radio" name="font" id="arial" value="text--arial" />
+        <label for="arial" class="text--arial"> Arial </label>
+
+        <input type="radio" name="font" id="comic" value="text--comic" />
+        <label for="comic" class="text--comic"> Comic Sans </label>
+
+        <input type="color" onchange="handleColor(event)" />
+      </div>
+    </div>
+    <input placeholder="Press ENTER to add a new task" class="task__input" type="text" onkeyup="handleText(event)" />
+    <button onclick="addTask()">ADD</button>
+
+    <ul class="task-list__wrap"></ul>
+    <script src="index.js"></script>
+  </body>
+</html>
